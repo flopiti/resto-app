@@ -1,10 +1,9 @@
 import {useState, useEffect} from 'react';
 import { getRestoClose } from '@/api/restaurants';
+import RestaurantCard from '@/components/RestaurantCard';
+import { Restaurant } from "@/api/restaurants";
 
-interface Restaurant {
-    _id: number;
-    name: string;
-  }
+
 const RestoList: React.FC<{ radius: number }> = ({ radius }) => {
     const [restaurants, setRestaurants] = useState<Restaurant[] | null>(null);
   
@@ -15,18 +14,18 @@ const RestoList: React.FC<{ radius: number }> = ({ radius }) => {
     }, [radius]);
   
     return (
-        <ul>
-          {restaurants ? (
-            restaurants.map(resto => (
-              <li key={resto._id}>
-                <h2>{resto.name}</h2>
-              </li>
-            ))
-          ) : (
-            <li>Loading...</li>
-          )}
-        </ul>
-      );
+      <ul>
+        {restaurants ? (
+          restaurants.map((resto) => (
+            <div>
+              <RestaurantCard key={resto._id} restaurant={resto} />
+            </div>
+          ))
+        ) : (
+          <li>Loading...</li>
+        )}
+      </ul>
+    );
     
   };
 

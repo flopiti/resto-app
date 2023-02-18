@@ -1,8 +1,11 @@
 import axios from 'axios';
 
-interface Restaurant {
+export interface Restaurant {
   _id: number;
   name: string;
+  location: object;
+  categories: Array<string>;
+  
 }
 
 
