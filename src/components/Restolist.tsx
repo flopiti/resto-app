@@ -4,11 +4,11 @@ import RestaurantCard from '@/components/RestaurantCard';
 import { Restaurant } from "@/api/restaurants";
 
 
-const RestoList: React.FC<{ radius: number }> = ({ radius }) => {
+const RestoList: React.FC<{ radius: number, location_lat: number, location_long: number }> = ({ radius,location_lat,location_long }) => {
     const [restaurants, setRestaurants] = useState<Restaurant[] | null>(null);
   
     useEffect(() => {
-    getRestoClose(radius)
+    getRestoClose(radius, location_lat ,location_long)
         .then(res => setRestaurants(res))
         .catch(error => console.error(error));
     }, [radius]);
