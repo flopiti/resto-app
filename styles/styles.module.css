@@ -4,9 +4,11 @@
     margin-right: auto;
     border-radius: 2px;
     padding: 10px;
+    font-family: 'Red Hat Display', sans-serif;
     background: rgb(2,0,36);
     background: linear-gradient(275deg, rgba(2,0,36,1) 0%, rgba(80,23,24,1) 0%, rgba(253,117,10,1) 100%);
     margin-bottom: 10px;
+
 }
 
 .baseLayout{
