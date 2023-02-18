@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "react-bootstrap";
 import { Restaurant } from "@/api/restaurants";
 import Chip from '@mui/material/Chip';
 import styles from '../../styles/styles.module.css';
@@ -11,17 +10,19 @@ interface Props {
 const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
 
   return (
-    <Card className={styles.card}>
-      <Card.Body>
-        <Card.Header>{restaurant.name}</Card.Header>
+    <div className={styles.card}>
+      <div className={styles.card_header}>
+      {restaurant.name}
+      </div>
+      <div className={styles.card_body}>
         {
           restaurant.categories.map((category) => {
-            return <Chip label={category} />
+            return <Chip label={category} className={styles.cat_item} />
           })
-
         }
-      </Card.Body>
-    </Card>
+      </div>
+    </div>
+
   );
 };
 
