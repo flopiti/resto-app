@@ -10,7 +10,7 @@ const RestoList: React.FC<{ radius: number, location_lat: number, location_long:
     getRestoClose(radius, location_lat ,location_long)
         .then(res => setRestaurants(res))
         .catch(error => console.error(error));
-    });
+    }, [radius, location_lat, location_long]);
   
     return (
       <ul>
