@@ -7,11 +7,6 @@ interface Coordinates {
   longitude: number;
 }
 
-interface MyComponentProps {
-  coordinates: Coordinates;
-}
-
-
 export default function Home(){
   const [userLocation, setUserLocation] = useState<Coordinates>({ latitude: 0, longitude: 0 });
   useEffect(() => {
@@ -24,11 +19,11 @@ export default function Home(){
         console.error(error);
       }
     );
-  }, []);
+  });
 
   return (
     <>
-      <RestoList radius={100} location_lat={userLocation.latitude} location_long={userLocation.longitude} />
+      <RestoList radius={400} location_lat={userLocation.latitude} location_long={userLocation.longitude} />
     </>
   );
 }
