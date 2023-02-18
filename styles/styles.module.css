@@ -2,7 +2,25 @@
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    background-color:#fdedb2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #e33946;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .baseLayout{
+    border: 1px solid #000000;
+}
+
+.card_header{
+} 
+
+.card_body{
+
+}
+.cat_item{
+    margin-left: 5px;
+    margin-right: 5px;
 }

@@ -16,8 +16,7 @@ interface APIResponse {
 export const getRestoClose = async (radius: number,location_lat: number,location_long:number ): Promise<Restaurant[]> => {
   const response = await axios.get<APIResponse>(`https://api.radar.io/v1/search/places?categories=restaurant&near=${location_lat}%2C${location_long}&radius=${radius}`,{
     headers: {
-
-      'Authorization' : ''
+      'Authorization' : ``
   }
 });
 
