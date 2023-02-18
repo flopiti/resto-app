@@ -1,5 +1,5 @@
-import RestoList from '@/components/Restolist';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import BaseLayout from '@/components/BaseLayout';
+import RestoList from '@/components/Restolist';import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from "react";
 
 interface Coordinates {

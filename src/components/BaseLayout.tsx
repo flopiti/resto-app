@@ -3,8 +3,8 @@ import styles from '../../styles/styles.module.css';
 
 const BaseLayout = ({ children } : any) => {
     return (
-        <div className="container">
-        <main className={styles.baseLayout}>{children}</main>
+        <div className={styles.baseLayout}>
+            {children}
         </div>
     );
     };
