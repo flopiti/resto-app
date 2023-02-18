@@ -1,5 +1,5 @@
-import RestoList from '@/components/restolist';
-
+import RestoList from '@/components/Restolist';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home(){
   return (
