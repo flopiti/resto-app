@@ -1,5 +1,5 @@
 import React from "react";
-import { Restaurant } from "@/api/restaurants";
+import { Restaurant } from "@/pages/api/restaurants";
 import Chip from '@mui/material/Chip';
 import styles from '../../styles/styles.module.css';
 
