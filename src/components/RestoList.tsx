@@ -5,6 +5,7 @@ import { Restaurant } from "@/pages/api/restaurants";
 
 
 const RestoList: React.FC<{ radius: number, location_lat: number, location_long: number }> = ({ radius,location_lat,location_long }) => {
+
     const [restaurants, setRestaurants] = useState<Restaurant[] | null>(null);
 
 
@@ -23,12 +24,13 @@ const RestoList: React.FC<{ radius: number, location_lat: number, location_long:
       loadRestaurants({radius, location_lat ,location_long})
         .catch(error => console.error(error));
     }, [radius, location_lat, location_long]);
-  
+
+
     return (
       <ul>
         {restaurants ? (
-          restaurants.map((resto) => (
-            <div>
+          restaurants.map((resto, index) => (
+            <div key={index}>
               <RestaurantCard key={resto._id} restaurant={resto} />
             </div>
           ))

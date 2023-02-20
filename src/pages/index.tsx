@@ -1,5 +1,5 @@
 import BaseLayout from '@/components/BaseLayout';
-import RestoList from '@/components/Restolist';import 'bootstrap/dist/css/bootstrap.min.css';
+import RestoList from '@/components/RestoList';import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from "react";
 
 interface Coordinates {
@@ -22,8 +22,8 @@ export default function Home(){
   }, []);
 
   return (
-    <>
+    <BaseLayout>
       <RestoList radius={400} location_lat={userLocation.latitude} location_long={userLocation.longitude} />
-    </>
+    </BaseLayout >
   );
 }

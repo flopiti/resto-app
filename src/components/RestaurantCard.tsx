@@ -16,8 +16,8 @@ const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
       </div>
       <div className={styles.card_body}>
         {
-          restaurant.categories.map((category) => {
-            return <Chip label={category} className={styles.cat_item} />
+          restaurant.categories.map((category, index) => {
+            return <Chip key={index} label={category} className={styles.cat_item} />
           })
         }
       </div>
