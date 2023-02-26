@@ -8,7 +8,7 @@ interface Coordinates {
 }
 
 export default function Home(){
-  const [userLocation, setUserLocation] = useState<Coordinates>({ latitude: 0, longitude: 0 });
+  const [userLocation, setUserLocation] = useState<Coordinates>();
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -22,8 +22,18 @@ export default function Home(){
   }, []);
 
   return (
-    <BaseLayout>
-      <RestoList radius={400} location_lat={userLocation.latitude} location_long={userLocation.longitude} />
-    </BaseLayout >
+    <React.StrictMode>
+      <BaseLayout>
+      {userLocation ? (
+        <RestoList
+        radius={900}
+        location_lat={userLocation.latitude}
+        location_long={userLocation.longitude}
+      />
+      ): (
+        <li>No location acces , please give acces to GeoLocation</li>
+      )}
+      </BaseLayout>
+    </React.StrictMode>
   );
 }
