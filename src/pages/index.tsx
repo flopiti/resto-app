@@ -31,7 +31,7 @@ export default function Home(){
         location_long={userLocation.longitude}
       />
       ): (
-        <li>No location acces , please give acces to GeoLocation</li>
+        <li>No location access , please give acces to GeoLocation</li>
       )}
       </BaseLayout>
     </React.StrictMode>
