@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import { getRestoClose } from '@/pages/api/restaurants';
 import RestaurantCard from '@/components/RestaurantCard';
 import { Restaurant } from "@/pages/api/restaurants";
+import styles from '../../styles/styles.module.css';
 
 
 const RestoList: React.FC<{ radius: number, location_lat: number, location_long: number }> = ({ radius,location_lat,location_long }) => {
@@ -27,7 +28,7 @@ const RestoList: React.FC<{ radius: number, location_lat: number, location_long:
 
 
     return (
-      <ul>
+      <ul className={styles.list}>
         {restaurants ? (
           restaurants.map((resto, index) => (
             <div key={index}>
