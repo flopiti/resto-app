@@ -22,6 +22,7 @@ export const getRestoClose = async (radius: number,location_lat: number,location
   });
   return response.data.places;
   }
+  return [];
 };
 
 export const getRestodistance = async (id: number): Promise<number> => {
@@ -38,7 +39,6 @@ export default async function restaurants(req: NextApiRequest, res: NextApiRespo
   if (req.method === 'GET') {
     try {
       const restaurants = await getRestoClose(Number(req.query.radius),Number(req.query.location_lat),Number(req.query.location_long));
-      console.log(restaurants)
       res.status(200).json(restaurants);
     } catch (error) {
       console.error(error);
