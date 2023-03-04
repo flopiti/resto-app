@@ -23,7 +23,13 @@ export default function Home(){
 
   return (
     <BaseLayout>
-      <RestoList radius={400} location_lat={userLocation.latitude} location_long={userLocation.longitude} />
+      {
+        userLocation.latitude === 0 && userLocation.longitude === 0 ? (
+          <div>Loading...</div>
+        ) : (
+          <RestoList radius={400} location_lat={userLocation.latitude} location_long={userLocation.longitude} />
+          )
+      }
     </BaseLayout >
   );
 }
