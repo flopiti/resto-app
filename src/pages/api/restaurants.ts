@@ -25,14 +25,14 @@ export const getRestoClose = async (radius: number,location_lat: number,location
   return [];
 };
 
-// export const getRestodistance = async (id: number): Promise<number> => {
-//   const response = await axios.get<APIResponse>(`https://api.radar.io/v1/search/places?categories=restaurant&near=45.540748%2C-73.630126&radius=${radius}`,{
-//     headers: {
-//       'Authorization': `${process.env.RADAR_API_KEY}`
-//     }
-// });
-//   return 2;
-// };
+export const getRestodistance = async (id: number): Promise<number> => {
+  const response = await axios.get<APIResponse>(`https://api.radar.io/v1/search/places?categories=restaurant&near=45.540748%2C-73.630126&radius=${radius}`,{
+    headers: {
+      'Authorization': `${process.env.RADAR_API_KEY}`
+    }
+});
+  return 2;
+};
 
 
 export default async function restaurants(req: NextApiRequest, res: NextApiResponse) {
