@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Restaurant } from "@/pages/api/restaurants";
+import { Routes } from "@/pages/api/routes";
 import Chip from '@mui/material/Chip';
 import styles from '../../styles/styles.module.css';
 import { motion } from "framer-motion"
 import { WalkingBox } from "./WalkingBox";
-import { Routes } from "@/pages/api/routes";
 import { CarBox } from "./CarBox";
 import { BikeBox } from "./BikeBox";
 

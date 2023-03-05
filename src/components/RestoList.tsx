@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react';
-import { getRestoClose } from '@/pages/api/restaurants';
 import RestaurantCard from '@/components/RestaurantCard';
 import { Restaurant } from "@/pages/api/restaurants";
 import styles from '../../styles/styles.module.css';
