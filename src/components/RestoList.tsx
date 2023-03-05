@@ -32,7 +32,7 @@ const RestoList: React.FC<{ radius: number, location_lat: number, location_long:
         {restaurants ? (
           restaurants.map((resto, index) => (
             <div key={index}>
-              <RestaurantCard key={resto._id} restaurant={resto} />
+              <RestaurantCard key={resto._id} restaurant={resto} orig_lat={location_lat} orig_long={location_long} />
             </div>
           ))
         ) : (
