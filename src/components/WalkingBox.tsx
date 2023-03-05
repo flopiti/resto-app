@@ -1,14 +1,12 @@
 import styles from '../../styles/styles.module.css';
+import Image from 'next/image'
 
-export const WalkingBox = () => {
+export const WalkingBox = ({timeInMins}:any) => {
     return (
         <span className={styles.walkingBox}>
-            <div>
-                <h3>Walking</h3>
-            </div>
-            <div>
-                <p>Walking is a great way to get around.</p>
-            </div>
+        
+                <Image src="/walking.png" alt={''} width="64" height="64"/>
+                {timeInMins} mins
         </span>
     );
     };
